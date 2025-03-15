@@ -1,6 +1,10 @@
 local M = {}
 local colors = require("miracle-of-god.color").COLORS
 
+function HL(syntaxName, options)
+	vim.api.nvim_set_hl(0, syntaxName, options)
+end
+
 function M.setHighLight(config)
 	 -- 基础高亮组
 	 HL("Normal", { fg = colors.FG, bg = colors.BG })
