@@ -1,1 +1,1 @@
-require("miracle-of-god.lualine.scheme").lualine()
+return require("miracle-of-god.lualine.scheme").lualine()
