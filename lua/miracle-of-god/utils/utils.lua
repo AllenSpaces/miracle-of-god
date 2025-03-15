@@ -1,7 +1,7 @@
 local M = {}
 local colors = require("miracle-of-god.utils.color").COLORS
 
-function HL(syntaxName, options)
+local function HL(syntaxName, options)
 	vim.api.nvim_set_hl(0, syntaxName, options)
 end
 
@@ -155,10 +155,11 @@ function M.setHighLight()
 	HL("Directory", { fg = colors.BLUE })
 
 	-- Notify 高亮组
-	HL("NotifyError", { fg = colors.RED })
-	HL("NotifyWarn", { fg = colors.YELLOW })
-	HL("NotifyInfo", { fg = colors.BLUE })
-	HL("NotifyHint", { fg = colors.ORANGE })
+	HL("NotifyERROR", { fg = colors.RED })
+	HL("NotifyWARN", { fg = colors.YELLOW })
+	HL("NotifyINFO", { fg = colors.BLUE })
+	HL("NotifyDEBUG", { fg = colors.GREEN })
+	HL("NotifyTRACE", { fg = colors.PURPLE })
 end
 
 return M
