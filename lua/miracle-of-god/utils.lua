@@ -1,7 +1,7 @@
 local M = {}
 local colors = require("miracle-of-god.color").COLORS
 
-unction M.setHighLight(config)
+function M.setHighLight(config)
 	 -- 基础高亮组
 	 HL("Normal", { fg = colors.FG, bg = colors.BG })
 	 HL("Comment", { fg = colors.GRAY, italic = true })
