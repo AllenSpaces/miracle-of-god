@@ -154,6 +154,8 @@ function M.setHighLight(config)
 
 	 -- UI 高亮组
 	 HL("Directory", { fg = colors.BLUE })
+	 HL("StatusLine", { bg = "NONE" })
+	 HL("StatusLineNC", { bg = "NONE" })
 end
 
 return M
