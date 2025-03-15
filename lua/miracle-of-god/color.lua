@@ -12,6 +12,7 @@ M.COLORS = {
     PURPLE = "#dbdbff",
     ORANGE = "#ffe2ce",
     PINK = "#ffd7fd",
+    BROWN = "#ffd79a"
 }
 
 function M.getColor(colorName)
