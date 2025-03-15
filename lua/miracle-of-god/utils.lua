@@ -31,6 +31,14 @@ function M.setHighLight(config)
 	 HL("SpecialKey", { fg = colors.ORANGE })
 	 HL("Title", { fg = colors.BLUE })
 	 HL("@variable", { fg = colors.ORANGE })
+	 HL("Import", { fg = colors.ORANGE })
+	 HL("Export", { fg = colors.RED })
+	 HL("Module", { fg = colors.PURPLE })
+	 HL("Namespace", { fg = colors.RED })
+	 HL("Package", { fg = colors.PURPLE })
+	 HL("Use", { fg = colors.GREEN })
+	 HL("Include", { fg = colors.PURPLE })
+	 HL("Require", { fg = colors.ORANGE })
 
 	 -- JavaScript 高亮组
 	 HL("jsFunction", { fg = colors.PURPLE })
@@ -41,6 +49,7 @@ function M.setHighLight(config)
 	 HL("jsObjectKey", { fg = colors.PINK })
 	 HL("jsObjectValue", { fg = colors.PINK })
 	 HL("jsObjectProp", { fg = colors.PINK })
+	 
 
 	 -- Java 高亮组
 	 HL("javaFunction", { fg = colors.PURPLE })
