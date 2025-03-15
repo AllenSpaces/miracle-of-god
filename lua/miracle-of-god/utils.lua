@@ -123,9 +123,9 @@ function M.setHighLight(config)
 	 HL("vueObjectProp", { fg = colors.BROWN })
 
 	-- HTML 高亮组
-	HL("htmlTag", { fg = colors.BLUE })
-	HL("htmlEndTag", { fg = colors.BLUE })
-	HL("htmlTagName", { fg = colors.RED })
+	HL("htmlTag", { fg = colors.RED })
+	HL("htmlEndTag", { fg = colors.RED })
+	HL("htmlTagName", { fg = colors.BROWN })
 	HL("htmlArg", { fg = colors.ORANGE })
 	HL("htmlScriptTag", { fg = colors.PURPLE })
 	HL("htmlSpecialTagName", { fg = colors.PINK })
