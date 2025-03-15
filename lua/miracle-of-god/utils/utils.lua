@@ -155,11 +155,15 @@ function M.setHighLight()
 	HL("Directory", { fg = colors.BLUE })
 
 	-- Notify 高亮组
-	HL("NotifyERROR", { fg = colors.RED })
-	HL("NotifyWARN", { fg = colors.YELLOW })
-	HL("NotifyINFO", { fg = colors.BLUE })
-	HL("NotifyDEBUG", { fg = colors.GREEN })
-	HL("NotifyTRACE", { fg = colors.PURPLE })
+	HL("NotifyERRORBorder", { fg = colors.RED })
+	HL("NotifyERRORTitle", { fg = colors.RED })
+	HL("NotifyERRORBody", { fg = colors.RED })
+	HL("NotifyWARNBorder", { fg = colors.YELLOW })
+	HL("NotifyWARNTitle", { fg = colors.YELLOW })
+	HL("NotifyWARNBody", { fg = colors.YELLOW })
+	HL("NotifyINFOBorder", { fg = colors.BLUE })
+	HL("NotifyINFOTitle", { fg = colors.BLUE })
+	HL("NotifyINFOBody", { fg = colors.BLUE })
 end
 
 return M
