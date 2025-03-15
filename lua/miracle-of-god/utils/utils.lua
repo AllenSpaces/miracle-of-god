@@ -153,6 +153,12 @@ function M.setHighLight()
 
 	-- UI 高亮组
 	HL("Directory", { fg = colors.BLUE })
+
+	-- Notify 高亮组
+	HL("NotifyError", { fg = colors.RED })
+	HL("NotifyWarn", { fg = colors.YELLOW })
+	HL("NotifyInfo", { fg = colors.BLUE })
+	HL("NotifyHint", { fg = colors.ORANGE })
 end
 
 return M
