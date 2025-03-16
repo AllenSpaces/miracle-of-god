@@ -164,6 +164,33 @@ function M.setHighLight()
 	HL("NotifyINFOBorder", { fg = colors.BLUE })
 	HL("NotifyINFOTitle", { fg = colors.BLUE })
 	HL("NotifyINFOBody", { fg = colors.BLUE })
+
+	-- Markdown 高亮组
+	HL("markdownH1", { fg = colors.RED, bold = true })
+	HL("markdownH2", { fg = colors.ORANGE, bold = true })
+	HL("markdownH3", { fg = colors.YELLOW, bold = true })
+	HL("markdownH4", { fg = colors.GREEN, bold = true })
+	HL("markdownH5", { fg = colors.BLUE, bold = true })
+	HL("markdownH6", { fg = colors.PURPLE, bold = true })
+	HL("markdownCode", { fg = colors.GREEN })
+	HL("markdownCodeBlock", { fg = colors.GREEN })
+	HL("markdownLinkText", { fg = colors.BLUE, underline = true })
+	HL("markdownLink", { fg = colors.BLUE, underline = true })
+	HL("markdownListMarker", { fg = colors.ORANGE })
+	HL("markdownBold", { fg = colors.YELLOW, bold = true })
+	HL("markdownItalic", { fg = colors.PINK, italic = true })
+	HL("markdownBlockquote", { fg = colors.GRAY })
+	HL("markdownRule", { fg = colors.GRAY })
+
+	-- JSON 高亮组
+	HL("jsonKeyword", { fg = colors.PINK })
+	HL("jsonString", { fg = colors.GREEN })
+	HL("jsonNumber", { fg = colors.BROWN })
+	HL("jsonBoolean", { fg = colors.BLUE })
+	HL("jsonNull", { fg = colors.PURPLE })
+	HL("jsonBraces", { fg = colors.ORANGE })
+	HL("jsonBrackets", { fg = colors.ORANGE })
+	HL("jsonQuote", { fg = colors.GRAY })
 end
 
 return M
