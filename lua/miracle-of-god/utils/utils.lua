@@ -162,11 +162,11 @@ function M.setHighLight()
 	HL("NotifyWARNBorder", { fg = colors.YELLOW })
 	HL("NotifyWARNTitle", { fg = colors.YELLOW })
 	HL("NotifyWARNBody", { fg = colors.YELLOW })
-	HL("NotifyERRORIcon", { fg = colors.YELLOW })
+	HL("NotifyWARNIcon", { fg = colors.YELLOW })
 	HL("NotifyINFOBorder", { fg = colors.BLUE })
 	HL("NotifyINFOTitle", { fg = colors.BLUE })
 	HL("NotifyINFOBody", { fg = colors.BLUE })
-	HL("NotifyERRORIcon", { fg = colors.BLUE })
+	HL("NotifyINFOIcon", { fg = colors.BLUE })
 
 	-- JSON 高亮组
 	HL("jsonKeyword", { fg = colors.PINK })
