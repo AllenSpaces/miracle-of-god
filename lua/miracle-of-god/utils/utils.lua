@@ -6,15 +6,12 @@ local function HL(syntaxName, options)
 end
 
 function M.setHighLight()
-	-- 基础高亮组
 	HL("Normal", { fg = colors.FG, bg = colors.BG })
 	HL("Comment", { fg = colors.GRAY, italic = true })
 	HL("CursorLine", { bg = "" })
 	HL("CursorColumn", { bg = "" })
 	HL("LineNr", { fg = colors.GRAY })
 	HL("CursorLineNr", { fg = colors.RED })
-
-	-- 语法高亮组
 	HL("String", { fg = colors.RED })
 	HL("Number", { fg = colors.BROWN })
 	HL("Boolean", { fg = colors.GREEN })
@@ -39,8 +36,6 @@ function M.setHighLight()
 	HL("Use", { fg = colors.GREEN })
 	HL("Include", { fg = colors.PURPLE })
 	HL("Require", { fg = colors.ORANGE })
-
-	-- JavaScript 高亮组
 	HL("jsFunction", { fg = colors.PURPLE })
 	HL("jsVariable", { fg = colors.RED })
 	HL("jsThis", { fg = colors.GREEN })
@@ -49,8 +44,6 @@ function M.setHighLight()
 	HL("jsObjectKey", { fg = colors.PINK })
 	HL("jsObjectValue", { fg = colors.PINK })
 	HL("jsObjectProp", { fg = colors.PINK })
-
-	-- Java 高亮组
 	HL("javaFunction", { fg = colors.PURPLE })
 	HL("javaVariable", { fg = colors.RED })
 	HL("javaThis", { fg = colors.GREEN })
@@ -59,8 +52,6 @@ function M.setHighLight()
 	HL("javaObjectKey", { fg = colors.PINK })
 	HL("javaObjectValue", { fg = colors.GREEN })
 	HL("javaObjectProp", { fg = colors.BROWN })
-
-	-- Dart 高亮组
 	HL("dartFunction", { fg = colors.PURPLE })
 	HL("dartVariable", { fg = colors.RED })
 	HL("dartThis", { fg = colors.GREEN })
@@ -69,8 +60,6 @@ function M.setHighLight()
 	HL("dartObjectKey", { fg = colors.PINK })
 	HL("dartObjectValue", { fg = colors.GREEN })
 	HL("dartObjectProp", { fg = colors.BROWN })
-
-	-- TypeScript 高亮组
 	HL("tsFunction", { fg = colors.PURPLE })
 	HL("tsVariable", { fg = colors.RED })
 	HL("tsThis", { fg = colors.GREEN })
@@ -79,8 +68,6 @@ function M.setHighLight()
 	HL("tsObjectKey", { fg = colors.PINK })
 	HL("tsObjectValue", { fg = colors.GREEN })
 	HL("tsObjectProp", { fg = colors.BROWN })
-
-	-- C 高亮组
 	HL("cFunction", { fg = colors.PURPLE })
 	HL("cVariable", { fg = colors.RED })
 	HL("cThis", { fg = colors.GREEN })
@@ -89,8 +76,6 @@ function M.setHighLight()
 	HL("cObjectKey", { fg = colors.PINK })
 	HL("cObjectValue", { fg = colors.GREEN })
 	HL("cObjectProp", { fg = colors.BROWN })
-
-	-- C++ 高亮组
 	HL("cppFunction", { fg = colors.PURPLE })
 	HL("cppVariable", { fg = colors.RED })
 	HL("cppThis", { fg = colors.GREEN })
@@ -99,8 +84,6 @@ function M.setHighLight()
 	HL("cppObjectKey", { fg = colors.PINK })
 	HL("cppObjectValue", { fg = colors.GREEN })
 	HL("cppObjectProp", { fg = colors.BROWN })
-
-	-- C# 高亮组
 	HL("csFunction", { fg = colors.PURPLE })
 	HL("csVariable", { fg = colors.RED })
 	HL("csThis", { fg = colors.GREEN })
@@ -109,8 +92,6 @@ function M.setHighLight()
 	HL("csObjectKey", { fg = colors.PINK })
 	HL("csObjectValue", { fg = colors.GREEN })
 	HL("csObjectProp", { fg = colors.BROWN })
-
-	-- Python 高亮组
 	HL("pythonFunction", { fg = colors.PURPLE })
 	HL("pythonVariable", { fg = colors.RED })
 	HL("pythonThis", { fg = colors.GREEN })
@@ -119,8 +100,6 @@ function M.setHighLight()
 	HL("pythonObjectKey", { fg = colors.PINK })
 	HL("pythonObjectValue", { fg = colors.GREEN })
 	HL("pythonObjectProp", { fg = colors.BROWN })
-
-	-- Vue 高亮组
 	HL("vueFunction", { fg = colors.PURPLE })
 	HL("vueVariable", { fg = colors.RED })
 	HL("vueThis", { fg = colors.GREEN })
@@ -129,8 +108,6 @@ function M.setHighLight()
 	HL("vueObjectKey", { fg = colors.PINK })
 	HL("vueObjectValue", { fg = colors.GREEN })
 	HL("vueObjectProp", { fg = colors.BROWN })
-
-	-- HTML 高亮组
 	HL("htmlTag", { fg = colors.RED })
 	HL("htmlEndTag", { fg = colors.RED })
 	HL("htmlTagName", { fg = colors.BROWN })
@@ -140,21 +117,13 @@ function M.setHighLight()
 	HL("htmlLink", { fg = colors.GREEN, underline = true })
 	HL("htmlBold", { fg = colors.YELLOW, bold = true })
 	HL("htmlItalic", { fg = colors.PINK, italic = true })
-
-	-- 搜索高亮组
 	HL("Search", { fg = colors.BG, bg = colors.YELLOW })
 	HL("IncSearch", { fg = colors.BG, bg = colors.YELLOW })
-
-	-- 诊断高亮组
 	HL("DiagnosticError", { fg = colors.RED })
 	HL("DiagnosticWarn", { fg = colors.YELLOW })
 	HL("DiagnosticInfo", { fg = colors.BLUE })
 	HL("DiagnosticHint", { fg = colors.ORANGE })
-
-	-- UI 高亮组
 	HL("Directory", { fg = colors.BLUE })
-
-	-- Notify 高亮组
 	HL("NotifyERRORBorder", { fg = colors.RED })
 	HL("NotifyERRORTitle", { fg = colors.RED })
 	HL("NotifyERRORBody", { fg = colors.RED })
@@ -167,8 +136,6 @@ function M.setHighLight()
 	HL("NotifyINFOTitle", { fg = colors.BLUE })
 	HL("NotifyINFOBody", { fg = colors.BLUE })
 	HL("NotifyINFOIcon", { fg = colors.BLUE })
-
-	-- JSON 高亮组
 	HL("jsonKeyword", { fg = colors.PINK })
 	HL("jsonString", { fg = colors.GREEN })
 	HL("jsonNumber", { fg = colors.BROWN })
