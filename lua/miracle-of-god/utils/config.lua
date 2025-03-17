@@ -2,12 +2,21 @@ local M = {}
 
 M.DEFAULT_CONFIG = {
 	dark = true,
-
-	ui = {
-		foundation = {},
-		syntax = {},
-		search = {},
-		diagnostic = {},
+	entrance = {
+		enabled = true,
+		settings = {
+			assic = {
+				"+-----------------------------------------+",
+				"+                                         +",
+				"+                                         +",
+				"+                                         +",
+				"+             Welcome to Neovim!          +",
+				"+                                         +",
+				"+                                         +",
+				"+                                         +",
+				"+-----------------------------------------+",
+			},
+		},
 	},
 }
 
