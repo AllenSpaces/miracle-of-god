@@ -6,9 +6,6 @@ M.setup = function(USER_CONFIG)
 
 	vim.o.background = config.dark and "dark" or "light"
 	require("miracle-of-god.utils.utils").setHighLight()
-	if config.entrance.enabled then
-		require("miracle-of-god.utils.entrance").entrancePage(config)
-	end
 end
 
 M.load = function()
