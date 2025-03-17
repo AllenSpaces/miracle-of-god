@@ -6,6 +6,7 @@ local function HL(syntaxName, options)
 end
 
 function M.setHighLight()
+	HL("MyCursorHighlight", { fg = colors.RED, bg = colors.BG })
 	HL("Normal", { fg = colors.FG, bg = colors.BG })
 	HL("Comment", { fg = colors.GRAY, italic = true })
 	HL("CursorLine", { bg = "" })
