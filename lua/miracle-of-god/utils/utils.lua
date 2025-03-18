@@ -7,7 +7,6 @@ end
 
 function M.setHighLight()
 	-- basic
-	HL("MyCursorHighlight", { fg = colors.RED, bg = colors.BG })
 	HL("Normal", { fg = colors.FG, bg = colors.BG })
 	HL("Comment", { fg = colors.GRAY, italic = true })
 	HL("CursorLine", { bg = "" })
@@ -29,6 +28,7 @@ function M.setHighLight()
 	HL("Label", { fg = colors.BLUE })
 	HL("SpecialKey", { fg = colors.ORANGE })
 	HL("Title", { fg = colors.BLUE })
+	HL("Tag", { fg = colors.PURPLE })
 	HL("@variable", { fg = colors.ORAK, italic = true })
 	HL("Search", { fg = colors.BG, bg = colors.YELLOW })
 	HL("IncSearch", { fg = colors.BG, bg = colors.YELLOW })
@@ -58,120 +58,6 @@ function M.setHighLight()
 	HL("DiffAdd", { fg = colors.GREEN })
 	HL("DiffChange", { fg = colors.BROWN })
 	HL("DiffDelete", { fg = colors.RED })
-	-- JavaScript
-	HL("@function.javascript", { link = "Function" })
-	HL("@variable.javascript", { link = "Identifier" })
-	HL("@keyword.javascript", { link = "Keyword" })
-	HL("@string.javascript", { link = "String" })
-	HL("@number.javascript", { link = "Number" })
-	HL("@comment.javascript", { link = "Comment" })
-
-	-- TypeScript
-	HL("@function.typescript", { link = "Function" })
-	HL("@variable.typescript", { link = "Identifier" })
-	HL("@keyword.typescript", { link = "Keyword" })
-	HL("@string.typescript", { link = "String" })
-	HL("@number.typescript", { link = "Number" })
-	HL("@comment.typescript", { link = "Comment" })
-
-	-- Java
-	HL("@function.java", { link = "Function" })
-	HL("@variable.java", { link = "Identifier" })
-	HL("@keyword.java", { link = "Keyword" })
-	HL("@string.java", { link = "String" })
-	HL("@number.java", { link = "Number" })
-	HL("@comment.java", { link = "Comment" })
-
-	-- Python
-	HL("@function.python", { link = "Function" })
-	HL("@variable.python", { link = "Identifier" })
-	HL("@keyword.python", { link = "Keyword" })
-	HL("@string.python", { link = "String" })
-	HL("@number.python", { link = "Number" })
-	HL("@comment.python", { link = "Comment" })
-
-	-- JSON
-	HL("@string.json", { link = "String" })
-	HL("@number.json", { link = "Number" })
-	HL("@keyword.json", { link = "Keyword" })
-
-	-- C
-	HL("@function.c", { link = "Function" })
-	HL("@variable.c", { link = "Identifier" })
-	HL("@keyword.c", { link = "Keyword" })
-	HL("@string.c", { link = "String" })
-	HL("@number.c", { link = "Number" })
-	HL("@comment.c", { link = "Comment" })
-
-	-- C++
-	HL("@function.cpp", { link = "Function" })
-	HL("@variable.cpp", { link = "Identifier" })
-	HL("@keyword.cpp", { link = "Keyword" })
-	HL("@string.cpp", { link = "String" })
-	HL("@number.cpp", { link = "Number" })
-	HL("@comment.cpp", { link = "Comment" })
-
-	-- C#
-	HL("@function.cs", { link = "Function" })
-	HL("@variable.cs", { link = "Identifier" })
-	HL("@keyword.cs", { link = "Keyword" })
-	HL("@string.cs", { link = "String" })
-	HL("@number.cs", { link = "Number" })
-	HL("@comment.cs", { link = "Comment" })
-
-	-- JSX
-	HL("@tag.jsx", { link = "Tag" })
-	HL("@attribute.jsx", { link = "Identifier" })
-	HL("@string.jsx", { link = "String" })
-	HL("@number.jsx", { link = "Number" })
-	HL("@comment.jsx", { link = "Comment" })
-
-	-- TSX
-	HL("@tag.tsx", { link = "Tag" })
-	HL("@attribute.tsx", { link = "Identifier" })
-	HL("@string.tsx", { link = "String" })
-	HL("@number.tsx", { link = "Number" })
-	HL("@comment.tsx", { link = "Comment" })
-
-	-- HTML
-	HL("@tag.html", { link = "Tag" })
-	HL("@attribute.html", { link = "Identifier" })
-	HL("@string.html", { link = "String" })
-	HL("@number.html", { link = "Number" })
-	HL("@comment.html", { link = "Comment" })
-
-	-- CSS
-	HL("@property.css", { link = "Identifier" })
-	HL("@value.css", { link = "String" })
-	HL("@keyword.css", { link = "Keyword" })
-	HL("@comment.css", { link = "Comment" })
-
-	-- Vue
-	HL("@tag.vue", { link = "Tag" })
-	HL("@attribute.vue", { link = "Identifier" })
-	HL("@string.vue", { link = "String" })
-	HL("@number.vue", { link = "Number" })
-	HL("@comment.vue", { link = "Comment" })
-
-	-- Dart
-	HL("@function.dart", { link = "Function" })
-	HL("@variable.dart", { link = "Identifier" })
-	HL("@keyword.dart", { link = "Keyword" })
-	HL("@string.dart", { link = "String" })
-	HL("@number.dart", { link = "Number" })
-	HL("@comment.dart", { link = "Comment" })
-
-	-- SCSS
-	HL("@property.scss", { link = "Identifier" })
-	HL("@value.scss", { link = "String" })
-	HL("@keyword.scss", { link = "Keyword" })
-	HL("@comment.scss", { link = "Comment" })
-
-	-- LESS
-	HL("@property.less", { link = "Identifier" })
-	HL("@value.less", { link = "String" })
-	HL("@keyword.less", { link = "Keyword" })
-	HL("@comment.less", { link = "Comment" })
 end
 
 return M
