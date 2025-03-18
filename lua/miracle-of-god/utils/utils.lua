@@ -2,7 +2,7 @@ local M = {}
 local colors = require("miracle-of-god.utils.color").COLORS
 
 local function HL(syntaxName, options)
-	vim.api.nvim_set_HL(syntaxName, options)
+	vim.api.nvim_set_hl(0, syntaxName, options)
 end
 
 function M.setHighLight()
@@ -55,6 +55,9 @@ function M.setHighLight()
 	HL("markdownH4", { fg = colors.GREEN, bold = true })
 	HL("markdownH5", { fg = colors.PINK, bold = true })
 	HL("markdownH6", { fg = colors.PURPLE, bold = true })
+	HL("DiffAdd", { fg = colors.GREEN })
+	HL("DiffChange", { fg = colors.BROWN })
+	HL("DiffDelete", { fg = colors.RED })
 	-- JavaScript
 	HL("@function.javascript", { link = "Function" })
 	HL("@variable.javascript", { link = "Identifier" })
