@@ -163,6 +163,12 @@ function M.setHighLight()
 	HL("bashTest", { fg = colors.GREEN })
 	HL("bashBuiltin", { fg = colors.PINK })
 	HL("bashSpecial", { fg = colors.ORANGE })
+	HL("markdownH1", { fg = colors.RED, bold = true })
+	HL("markdownH2", { fg = colors.ORANGE, bold = true })
+	HL("markdownH3", { fg = colors.YELLOW, bold = true })
+	HL("markdownH4", { fg = colors.GREEN, bold = true })
+	HL("markdownH5", { fg = colors.PINK, bold = true })
+	HL("markdownH6", { fg = colors.PURPLE, bold = true })
 end
 
 return M
