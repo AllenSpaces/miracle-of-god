@@ -9,6 +9,7 @@ function M.setHighLight()
 	-- basic
 	HL("Normal", { fg = colors.FG, bg = colors.BG })
 	HL("Comment", { fg = colors.GRAY, italic = true })
+	HL("Cursor", { fg = colors.ORANGE })
 	HL("CursorLine", { bg = "" })
 	HL("CursorColumn", { bg = "" })
 	HL("LineNr", { fg = colors.GRAY })
