@@ -67,6 +67,8 @@ function M.setHighLight()
 	HL("DiffAdd", { fg = colors.GREEN })
 	HL("DiffChange", { fg = colors.BROWN })
 	HL("DiffDelete", { fg = colors.RED })
+	HL("NvimTreeImageFile", { fg = colors.ORANGE })
+	HL("NvimTreeExecFile", { fg = colors.RED })
 end
 
 return M
