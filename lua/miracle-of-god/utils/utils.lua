@@ -69,6 +69,9 @@ function M.setHighLight()
 	HL("DiffDelete", { fg = colors.RED })
 	HL("NvimTreeImageFile", { fg = colors.ORANGE })
 	HL("NvimTreeExecFile", { fg = colors.RED })
+	HL("HopNextKey", { fg = colors.RED })
+	HL("HopNextKey1", { fg = colors.BLUE })
+	HL("HopNextKey2", { fg = colors.PURPLE })
 end
 
 return M
