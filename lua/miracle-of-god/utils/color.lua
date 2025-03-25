@@ -3,6 +3,7 @@ local M = {}
 M.COLORS = {
 	FG = "#c6dcfc",
 	BG = "#1e1e1e",
+	DEFAULT = "#ed6064",
 	GRAY = "#999999",
 	BLUE = "#c8ebf6",
 	GREEN = "#e0fdcd",

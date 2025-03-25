@@ -7,7 +7,7 @@ end
 
 function M.setHighLight()
 	-- basic
-	HL("Normal", { fg = colors.PURPLE })
+	HL("Normal", { fg = colors.DEFAULT })
 	HL("Comment", { fg = colors.GRAY, italic = true })
 	HL("Cursor", { fg = colors.ORANGE })
 	HL("CursorLine", { bg = "" })
