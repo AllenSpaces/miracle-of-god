@@ -14,6 +14,7 @@ M.COLORS = {
 	ORANGE = "#ffe2ce",
 	PINK = "#ffd7fd",
 	BROWN = "#ffd79a",
+	IDENTIFY = "#bfdbfa",
 }
 
 return M
