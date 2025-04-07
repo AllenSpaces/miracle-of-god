@@ -1,1 +1,1 @@
-require("miracle-of-god").load()
+require("miracle-of-god.init").setup()
