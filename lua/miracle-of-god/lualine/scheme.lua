@@ -6,51 +6,51 @@ function M.lualine()
 
 	-- 正常模式
 	miracle_of_god.normal = {
-		a = { bg = colors.PRIMARY, fg = colors.BG, bold = true },
-		b = { bg = colors.SELECTION, fg = colors.DEFAULT },
-		c = { bg = colors.SELECTION, fg = colors.GRAY },
+		a = { bg = "NONE", fg = colors.BLUE },
+		b = { bg = "NONE", fg = colors.DEFAULT },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	-- 插入模式
 	miracle_of_god.insert = {
-		a = { bg = colors.SUCCESS, fg = colors.BG, bold = true },
-		b = { bg = colors.SELECTION, fg = colors.DEFAULT },
-		c = { bg = colors.SELECTION, fg = colors.GRAY },
+		a = { bg = "NONE", fg = colors.GREEN },
+		b = { bg = "NONE", fg = colors.DEFAULT },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	-- 可视模式
 	miracle_of_god.visual = {
-		a = { bg = colors.WARNING, fg = colors.BG, bold = true },
-		b = { bg = colors.SELECTION, fg = colors.DEFAULT },
-		c = { bg = colors.SELECTION, fg = colors.GRAY },
+		a = { bg = "NONE", fg = colors.YELLOW },
+		b = { bg = "NONE", fg = colors.DEFAULT },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	-- 命令模式
 	miracle_of_god.command = {
-		a = { bg = colors.ERROR, fg = colors.BG, bold = true },
-		b = { bg = colors.SELECTION, fg = colors.DEFAULT },
-		c = { bg = colors.SELECTION, fg = colors.GRAY },
+		a = { bg = "NONE", fg = colors.RED },
+		b = { bg = "NONE", fg = colors.DEFAULT },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	-- 替换模式
 	miracle_of_god.replace = {
-		a = { bg = colors.PINK, fg = colors.BG, bold = true },
-		b = { bg = colors.SELECTION, fg = colors.DEFAULT },
-		c = { bg = colors.SELECTION, fg = colors.GRAY },
+		a = { bg = "NONE", fg = colors.PINK },
+		b = { bg = "NONE", fg = colors.DEFAULT },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	-- 终端模式
 	miracle_of_god.terminal = {
-		a = { bg = colors.CYAN, fg = colors.BG, bold = true },
-		b = { bg = colors.SELECTION, fg = colors.DEFAULT },
-		c = { bg = colors.SELECTION, fg = colors.GRAY },
+		a = { bg = "NONE", fg = colors.CYAN },
+		b = { bg = "NONE", fg = colors.DEFAULT },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	-- 非活动状态
 	miracle_of_god.inactive = {
-		a = { bg = colors.SELECTION, fg = colors.GRAY },
-		b = { bg = colors.SELECTION, fg = colors.GRAY },
-		c = { bg = colors.SELECTION, fg = colors.GRAY_DARK },
+		a = { bg = "NONE", fg = colors.GRAY },
+		b = { bg = "NONE", fg = colors.GRAY },
+		c = { bg = "NONE", fg = colors.GRAY },
 	}
 
 	return miracle_of_god
