@@ -39,7 +39,7 @@ function M.setHighLight()
 	HL("String", { fg = colors.STRING })
 	HL("Character", { fg = colors.STRING_LIGHT })
 	HL("Number", { fg = colors.PURPLE })
-	HL("Boolean", { fg = colors.ORANGE, italic = true })
+	HL("Boolean", { fg = colors.RED, italic = true })
 	HL("Float", { fg = colors.PURPLE_DARK })
 	HL("Identifier", { fg = colors.VARIABLE })
 	HL("Function", { fg = colors.FUNCTION })
@@ -120,7 +120,7 @@ function M.setHighLight()
 	-- 数字和常量
 	HL("@number", { fg = colors.PURPLE })
 	HL("@number.float", { fg = colors.PURPLE_DARK })
-	HL("@boolean", { fg = colors.ORANGE, italic = true })
+	HL("@boolean", { fg = colors.RED, italic = true })
 	HL("@constant", { fg = colors.YELLOW })
 	HL("@constant.builtin", { fg = colors.YELLOW, bold = true })
 	HL("@constant.macro", { fg = colors.YELLOW_DARK })
@@ -131,6 +131,12 @@ function M.setHighLight()
 	HL("@punctuation.delimiter", { fg = colors.DEFAULT })
 	HL("@punctuation.bracket", { fg = colors.DEFAULT })
 	HL("@punctuation.special", { fg = colors.DEFAULT })
+
+	-- 字典表 key 值
+	HL("@field", { fg = colors.PINK })
+	HL("@property", { fg = colors.PINK })
+	HL("@key", { fg = colors.PINK })
+	HL("@attribute", { fg = colors.PINK })
 
 	-- 注释
 	HL("@comment", { fg = colors.COMMENT, italic = true })
@@ -353,45 +359,45 @@ function M.setHighLight()
 	-- Mason.nvim 支持
 	-- ===========================================
 	-- Mason 窗口和边框
-	HL("MasonNormal", { fg = colors.DEFAULT, bg = colors.BG })
-	HL("MasonHeader", { fg = colors.BG, bg = colors.PRIMARY, bold = true })
-	HL("MasonHeaderSecondary", { fg = colors.BG, bg = colors.PURPLE, bold = true })
+	HL("MasonNormal", { fg = colors.DEFAULT, bg = "NONE" })
+	HL("MasonHeader", { fg = colors.PRIMARY, bg = "NONE", bold = true })
+	HL("MasonHeaderSecondary", { fg = colors.PURPLE, bg = "NONE", bold = true })
 	HL("MasonHighlight", { fg = colors.PRIMARY, bold = true })
-	HL("MasonHighlightBlock", { fg = colors.BG, bg = colors.PRIMARY })
-	HL("MasonHighlightBlockSecondary", { fg = colors.BG, bg = colors.PURPLE })
+	HL("MasonHighlightBlock", { fg = colors.PRIMARY, bg = "NONE" })
+	HL("MasonHighlightBlockSecondary", { fg = colors.PURPLE, bg = "NONE" })
 
 	-- Mason 状态指示
 	HL("MasonHighlightSecondary", { fg = colors.PURPLE, bold = true })
 	HL("MasonMuted", { fg = colors.GRAY })
-	HL("MasonMutedBlock", { fg = colors.BG, bg = colors.GRAY })
-	HL("MasonMutedBlockSecondary", { fg = colors.BG, bg = colors.GRAY_DARK })
+	HL("MasonMutedBlock", { fg = colors.GRAY, bg = "NONE" })
+	HL("MasonMutedBlockSecondary", { fg = colors.GRAY_DARK, bg = "NONE" })
 
 	-- Mason 安装状态
 	HL("MasonInstalling", { fg = colors.INFO, bold = true })
-	HL("MasonInstallingBlock", { fg = colors.BG, bg = colors.INFO })
+	HL("MasonInstallingBlock", { fg = colors.INFO, bg = "NONE" })
 	HL("MasonOutdated", { fg = colors.WARNING, bold = true })
-	HL("MasonOutdatedBlock", { fg = colors.BG, bg = colors.WARNING })
-	HL("MasonOutdatedBlockSecondary", { fg = colors.BG, bg = colors.WARNING_BG })
+	HL("MasonOutdatedBlock", { fg = colors.WARNING, bg = "NONE" })
+	HL("MasonOutdatedBlockSecondary", { fg = colors.WARNING, bg = "NONE" })
 
 	-- Mason 错误状态
 	HL("MasonError", { fg = colors.ERROR, bold = true })
-	HL("MasonErrorBlock", { fg = colors.BG, bg = colors.ERROR })
-	HL("MasonErrorBlockSecondary", { fg = colors.BG, bg = colors.ERROR_BG })
+	HL("MasonErrorBlock", { fg = colors.ERROR, bg = "NONE" })
+	HL("MasonErrorBlockSecondary", { fg = colors.ERROR, bg = "NONE" })
 
 	-- Mason 成功状态
 	HL("MasonSuccess", { fg = colors.SUCCESS, bold = true })
-	HL("MasonSuccessBlock", { fg = colors.BG, bg = colors.SUCCESS })
-	HL("MasonSuccessBlockSecondary", { fg = colors.BG, bg = colors.SUCCESS_BG })
+	HL("MasonSuccessBlock", { fg = colors.SUCCESS, bg = "NONE" })
+	HL("MasonSuccessBlockSecondary", { fg = colors.SUCCESS, bg = "NONE" })
 
 	-- Mason 警告状态
 	HL("MasonWarning", { fg = colors.WARNING, bold = true })
-	HL("MasonWarningBlock", { fg = colors.BG, bg = colors.WARNING })
-	HL("MasonWarningBlockSecondary", { fg = colors.BG, bg = colors.WARNING_BG })
+	HL("MasonWarningBlock", { fg = colors.WARNING, bg = "NONE" })
+	HL("MasonWarningBlockSecondary", { fg = colors.WARNING, bg = "NONE" })
 
 	-- Mason 信息状态
 	HL("MasonInfo", { fg = colors.INFO, bold = true })
-	HL("MasonInfoBlock", { fg = colors.BG, bg = colors.INFO })
-	HL("MasonInfoBlockSecondary", { fg = colors.BG, bg = colors.INFO_BG })
+	HL("MasonInfoBlock", { fg = colors.INFO, bg = "NONE" })
+	HL("MasonInfoBlockSecondary", { fg = colors.INFO, bg = "NONE" })
 
 	-- Mason 包状态
 	HL("MasonPackageInstalled", { fg = colors.SUCCESS })
@@ -429,11 +435,11 @@ function M.setHighLight()
 
 	-- Mason 进度条
 	HL("MasonProgress", { fg = colors.PRIMARY })
-	HL("MasonProgressBar", { fg = colors.BG, bg = colors.PRIMARY })
-	HL("MasonProgressBarSecondary", { fg = colors.BG, bg = colors.PURPLE })
-	HL("MasonProgressBarSuccess", { fg = colors.BG, bg = colors.SUCCESS })
-	HL("MasonProgressBarWarning", { fg = colors.BG, bg = colors.WARNING })
-	HL("MasonProgressBarError", { fg = colors.BG, bg = colors.ERROR })
+	HL("MasonProgressBar", { fg = colors.PRIMARY, bg = "NONE" })
+	HL("MasonProgressBarSecondary", { fg = colors.PURPLE, bg = "NONE" })
+	HL("MasonProgressBarSuccess", { fg = colors.SUCCESS, bg = "NONE" })
+	HL("MasonProgressBarWarning", { fg = colors.WARNING, bg = "NONE" })
+	HL("MasonProgressBarError", { fg = colors.ERROR, bg = "NONE" })
 
 	-- Mason 分隔符和边框
 	HL("MasonSeparator", { fg = colors.GRAY_DARK })
@@ -447,15 +453,15 @@ function M.setHighLight()
 
 	-- Mason 选择状态
 	HL("MasonSelected", { fg = colors.PRIMARY, bold = true })
-	HL("MasonSelectedBlock", { fg = colors.BG, bg = colors.PRIMARY })
-	HL("MasonSelectedBlockSecondary", { fg = colors.BG, bg = colors.PRIMARY_BG })
+	HL("MasonSelectedBlock", { fg = colors.PRIMARY, bg = "NONE" })
+	HL("MasonSelectedBlockSecondary", { fg = colors.PRIMARY, bg = "NONE" })
 
 	-- Mason 悬停状态
-	HL("MasonHover", { fg = colors.DEFAULT, bg = colors.SELECTION })
-	HL("MasonHoverBlock", { fg = colors.DEFAULT, bg = colors.SELECTION_LIGHT })
+	HL("MasonHover", { fg = colors.DEFAULT, bg = "NONE" })
+	HL("MasonHoverBlock", { fg = colors.DEFAULT, bg = "NONE" })
 
 	-- Mason 工具提示
-	HL("MasonTooltip", { fg = colors.DEFAULT, bg = colors.SELECTION })
+	HL("MasonTooltip", { fg = colors.DEFAULT, bg = "NONE" })
 	HL("MasonTooltipBorder", { fg = colors.GRAY_DARK })
 	HL("MasonTooltipTitle", { fg = colors.PRIMARY, bold = true })
 	HL("MasonTooltipContent", { fg = colors.DEFAULT })
