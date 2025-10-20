@@ -5,9 +5,14 @@ local M = {}
 local colors = require("miracle-of-god.utils.color").COLORS
 
 local function HL(syntaxName, options)
-	-- 统一将所有高亮背景设为透明
+	-- 统一透明；对选择和搜索相关组保留显式灰色背景
 	options = options or {}
-	options.bg = "NONE"
+	local preserve_bg =
+		syntaxName == "Visual" or syntaxName == "VisualNOS" or syntaxName == "VisualMode" or
+		syntaxName == "Search" or syntaxName == "IncSearch" or syntaxName == "CurSearch"
+	if not preserve_bg then
+		options.bg = "NONE"
+	end
 	if vim and vim.api and vim.api.nvim_set_hl then
 		vim.api.nvim_set_hl(0, syntaxName, options)
 	end
@@ -159,13 +164,13 @@ function M.setHighLight()
 	-- ===========================================
 	-- 搜索和选择
 	-- ===========================================
-	HL("Search", { fg = colors.BG, bg = colors.WARNING })
-	HL("IncSearch", { fg = colors.BG, bg = colors.PRIMARY })
-	HL("CurSearch", { fg = colors.BG, bg = colors.PRIMARY_DARK })
+	HL("Search", { fg = colors.DEFAULT, bg = colors.GRAY_BG })
+	HL("IncSearch", { fg = colors.DEFAULT, bg = colors.GRAY_BG_LIGHT })
+	HL("CurSearch", { fg = colors.DEFAULT, bg = colors.GRAY_BG })
 	HL("Substitute", { fg = colors.BG, bg = colors.PURPLE })
-	HL("Visual", { bg = colors.SELECTION })
-	HL("VisualNOS", { bg = colors.SELECTION_LIGHT })
-	HL("VisualMode", { bg = colors.SELECTION })
+	HL("Visual", { bg = colors.GRAY_BG })
+	HL("VisualNOS", { bg = colors.GRAY_BG_LIGHT })
+	HL("VisualMode", { bg = colors.GRAY_BG })
 
 	-- ===========================================
 	-- LSP 诊断
@@ -176,12 +181,12 @@ function M.setHighLight()
 	HL("DiagnosticHint", { fg = colors.PRIMARY })
 	HL("DiagnosticOk", { fg = colors.SUCCESS })
 
-	-- LSP 诊断下划线
-	HL("DiagnosticUnderlineError", { undercurl = true, sp = colors.ERROR })
-	HL("DiagnosticUnderlineWarn", { undercurl = true, sp = colors.WARNING })
-	HL("DiagnosticUnderlineInfo", { undercurl = true, sp = colors.INFO })
-	HL("DiagnosticUnderlineHint", { undercurl = true, sp = colors.PRIMARY })
-	HL("DiagnosticUnderlineOk", { undercurl = true, sp = colors.SUCCESS })
+	-- LSP 诊断下划线（双下划线 + 加粗）
+	HL("DiagnosticUnderlineError", { underdouble = true, bold = true, sp = colors.ERROR })
+	HL("DiagnosticUnderlineWarn", { underdouble = true, bold = true, sp = colors.WARNING })
+	HL("DiagnosticUnderlineInfo", { underdouble = true, bold = true, sp = colors.INFO })
+	HL("DiagnosticUnderlineHint", { underdouble = true, bold = true, sp = colors.PRIMARY })
+	HL("DiagnosticUnderlineOk", { underdouble = true, bold = true, sp = colors.SUCCESS })
 
 	-- LSP 虚拟文本
 	HL("DiagnosticVirtualTextError", { fg = colors.ERROR })
