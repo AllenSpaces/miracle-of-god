@@ -88,35 +88,36 @@ M.COLORS = {
 	GRAY_BG_LIGHT = "#3a3a3a", -- 浅灰色背景
 
 	-- 语义化颜色映射
-	PRIMARY = "#c8ebf6",      -- 主色调 - 蓝色
+	PRIMARY = "#c8ebf6",    -- 主色调 - 蓝色
 	PRIMARY_LIGHT = "#e6f4ff", -- 浅主色调
 	PRIMARY_DARK = "#9dd4f0", -- 深主色调
-	PRIMARY_BG = "#1a2a3a",   -- 主色调背景
+	PRIMARY_BG = "#1a2a3a", -- 主色调背景
 
-	SECONDARY = "#ffe2ce",    -- 次要色 - 橙色
-	SECONDARY_LIGHT = "#fff5f0", -- 浅次要色
-	SECONDARY_DARK = "#f0c8a8", -- 深次要色
-	SECONDARY_BG = "#2e1a0a", -- 次要色背景
+	-- 次要色改为紫色系以匹配用户偏好
+	SECONDARY = "#dbdbff",
+	SECONDARY_LIGHT = "#f5f0ff",
+	SECONDARY_DARK = "#c8b8e6",
+	SECONDARY_BG = "#2a1a2e",
 
-	SUCCESS = "#e0fdcd",      -- 成功色 - 绿色
+	SUCCESS = "#e0fdcd",    -- 成功色 - 绿色
 	SUCCESS_LIGHT = "#f0fde8", -- 浅成功色
 	SUCCESS_DARK = "#c8e6b8", -- 深成功色
-	SUCCESS_BG = "#1a2e1a",   -- 成功色背景
+	SUCCESS_BG = "#1a2e1a", -- 成功色背景
 
-	WARNING = "#fefed3",      -- 警告色 - 黄色
+	WARNING = "#fefed3",    -- 警告色 - 黄色
 	WARNING_LIGHT = "#fffef0", -- 浅警告色
 	WARNING_DARK = "#f5f4c0", -- 深警告色
-	WARNING_BG = "#2e2a1a",   -- 警告色背景
+	WARNING_BG = "#2e2a1a", -- 警告色背景
 
-	ERROR = "#fcc7c6",        -- 错误色 - 红色
-	ERROR_LIGHT = "#fff0f0",  -- 浅错误色
-	ERROR_DARK = "#f0a8a8",   -- 深错误色
-	ERROR_BG = "#2e1a1a",     -- 错误色背景
+	ERROR = "#fcc7c6",      -- 错误色 - 红色
+	ERROR_LIGHT = "#fff0f0", -- 浅错误色
+	ERROR_DARK = "#f0a8a8", -- 深错误色
+	ERROR_BG = "#2e1a1a",   -- 错误色背景
 
-	INFO = "#c8ffee",         -- 信息色 - 青色
-	INFO_LIGHT = "#f0fffe",   -- 浅信息色
-	INFO_DARK = "#a8e6e0",    -- 深信息色
-	INFO_BG = "#1a2e2e",      -- 信息色背景
+	INFO = "#c8ffee",       -- 信息色 - 青色
+	INFO_LIGHT = "#f0fffe", -- 浅信息色
+	INFO_DARK = "#a8e6e0",  -- 深信息色
+	INFO_BG = "#1a2e2e",    -- 信息色背景
 
 	-- 特殊用途颜色
 	SELECTION = "#2d3748",    -- 选择背景色
@@ -126,13 +127,14 @@ M.COLORS = {
 	COMMENT_DARK = "#666666", -- 深注释颜色
 
 	-- 文本颜色映射
-	STRING = "#e0fdcd",      -- 字符串颜色
+	STRING = "#e0fdcd",    -- 字符串颜色
 	STRING_LIGHT = "#f0fde8", -- 浅字符串颜色
 	STRING_DARK = "#c8e6b8", -- 深字符串颜色
 
-	KEYWORD = "#ffd7fd",     -- 关键字颜色
-	KEYWORD_LIGHT = "#fff0f5", -- 浅关键字颜色
-	KEYWORD_DARK = "#f0a8c8", -- 深关键字颜色
+	-- 关键字使用紫色系，避免粉色使用过多
+	KEYWORD = "#dbdbff",
+	KEYWORD_LIGHT = "#f5f0ff",
+	KEYWORD_DARK = "#b0a0d4",
 
 	FUNCTION = "#c8ebf6",    -- 函数颜色
 	FUNCTION_LIGHT = "#e6f4ff", -- 浅函数颜色
