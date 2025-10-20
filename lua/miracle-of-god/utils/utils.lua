@@ -1,8 +1,13 @@
+-- luacheck: globals vim
+---@diagnostic disable: undefined-global
+local vim = rawget(_G, "vim")
 local M = {}
 local colors = require("miracle-of-god.utils.color").COLORS
 
 local function HL(syntaxName, options)
-	vim.api.nvim_set_hl(0, syntaxName, options)
+	if vim and vim.api and vim.api.nvim_set_hl then
+		vim.api.nvim_set_hl(0, syntaxName, options)
+	end
 end
 
 function M.setHighLight()
@@ -133,10 +138,10 @@ function M.setHighLight()
 	HL("@punctuation.special", { fg = colors.DEFAULT })
 
 	-- 字典表 key 值
-	HL("@field", { fg = colors.PINK })
-	HL("@property", { fg = colors.PINK })
-	HL("@key", { fg = colors.PINK })
-	HL("@attribute", { fg = colors.PINK })
+	HL("@field", { fg = colors.CYAN })
+	HL("@property", { fg = colors.CYAN })
+	HL("@key", { fg = colors.CYAN })
+	HL("@attribute", { fg = colors.CYAN })
 
 	-- 注释
 	HL("@comment", { fg = colors.COMMENT, italic = true })

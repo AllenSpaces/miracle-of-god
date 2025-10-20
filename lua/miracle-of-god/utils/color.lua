@@ -131,10 +131,10 @@ M.COLORS = {
 	STRING_LIGHT = "#f0fde8", -- 浅字符串颜色
 	STRING_DARK = "#c8e6b8", -- 深字符串颜色
 
-	-- 关键字使用紫色系，避免粉色使用过多
-	KEYWORD = "#dbdbff",
-	KEYWORD_LIGHT = "#f5f0ff",
-	KEYWORD_DARK = "#b0a0d4",
+	-- 关键字切换为红色系
+	KEYWORD = "#fcc7c6",
+	KEYWORD_LIGHT = "#fff0f0",
+	KEYWORD_DARK = "#f0a8a8",
 
 	FUNCTION = "#c8ebf6",    -- 函数颜色
 	FUNCTION_LIGHT = "#e6f4ff", -- 浅函数颜色
