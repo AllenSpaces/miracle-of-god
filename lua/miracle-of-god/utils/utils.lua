@@ -38,9 +38,9 @@ function M.setHighLight()
 	HL("Comment", { fg = colors.COMMENT, italic = true })
 	HL("String", { fg = colors.STRING })
 	HL("Character", { fg = colors.STRING_LIGHT })
-	HL("Number", { fg = colors.ORANGE })
-	HL("Boolean", { fg = colors.PURPLE, italic = true })
-	HL("Float", { fg = colors.ORANGE_DARK })
+	HL("Number", { fg = colors.PURPLE })
+	HL("Boolean", { fg = colors.ORANGE, italic = true })
+	HL("Float", { fg = colors.PURPLE_DARK })
 	HL("Identifier", { fg = colors.VARIABLE })
 	HL("Function", { fg = colors.FUNCTION })
 	HL("Statement", { fg = colors.KEYWORD })
@@ -84,7 +84,7 @@ function M.setHighLight()
 	-- 变量
 	HL("@variable", { fg = colors.VARIABLE })
 	HL("@variable.builtin", { fg = colors.PRIMARY, italic = true })
-	HL("@variable.parameter", { fg = colors.ORANGE })
+	HL("@variable.parameter", { fg = colors.PURPLE })
 	HL("@variable.member", { fg = colors.VARIABLE_DARK })
 
 	-- 关键字
@@ -104,7 +104,7 @@ function M.setHighLight()
 	-- 字符串和文本
 	HL("@string", { fg = colors.STRING })
 	HL("@string.regex", { fg = colors.CYAN })
-	HL("@string.escape", { fg = colors.ORANGE })
+	HL("@string.escape", { fg = colors.PURPLE })
 	HL("@string.special", { fg = colors.CYAN_LIGHT })
 	HL("@text", { fg = colors.DEFAULT })
 	HL("@text.strong", { fg = colors.DEFAULT, bold = true })
@@ -118,9 +118,9 @@ function M.setHighLight()
 	HL("@text.reference", { fg = colors.PRIMARY })
 
 	-- 数字和常量
-	HL("@number", { fg = colors.ORANGE })
-	HL("@number.float", { fg = colors.ORANGE_DARK })
-	HL("@boolean", { fg = colors.PURPLE, italic = true })
+	HL("@number", { fg = colors.PURPLE })
+	HL("@number.float", { fg = colors.PURPLE_DARK })
+	HL("@boolean", { fg = colors.ORANGE, italic = true })
 	HL("@constant", { fg = colors.YELLOW })
 	HL("@constant.builtin", { fg = colors.YELLOW, bold = true })
 	HL("@constant.macro", { fg = colors.YELLOW_DARK })
@@ -148,7 +148,7 @@ function M.setHighLight()
 	HL("Search", { fg = colors.BG, bg = colors.WARNING })
 	HL("IncSearch", { fg = colors.BG, bg = colors.PRIMARY })
 	HL("CurSearch", { fg = colors.BG, bg = colors.PRIMARY_DARK })
-	HL("Substitute", { fg = colors.BG, bg = colors.SECONDARY })
+	HL("Substitute", { fg = colors.BG, bg = colors.PURPLE })
 	HL("Visual", { bg = colors.SELECTION })
 	HL("VisualNOS", { bg = colors.SELECTION_LIGHT })
 	HL("VisualMode", { bg = colors.SELECTION })
@@ -209,11 +209,11 @@ function M.setHighLight()
 	-- ===========================================
 	HL("@markup.heading", { fg = colors.PRIMARY, bold = true })
 	HL("@markup.heading.1", { fg = colors.PRIMARY, bold = true })
-	HL("@markup.heading.2", { fg = colors.SECONDARY, bold = true })
+	HL("@markup.heading.2", { fg = colors.PURPLE, bold = true })
 	HL("@markup.heading.3", { fg = colors.WARNING, bold = true })
 	HL("@markup.heading.4", { fg = colors.SUCCESS, bold = true })
 	HL("@markup.heading.5", { fg = colors.INFO, bold = true })
-	HL("@markup.heading.6", { fg = colors.PURPLE, bold = true })
+	HL("@markup.heading.6", { fg = colors.ORANGE, bold = true })
 
 	HL("@markup.strong", { fg = colors.DEFAULT, bold = true })
 	HL("@markup.italic", { fg = colors.DEFAULT, italic = true })
@@ -258,7 +258,7 @@ function M.setHighLight()
 	HL("NvimTreeGitDirty", { fg = colors.WARNING })
 	HL("NvimTreeGitStaged", { fg = colors.SUCCESS })
 	HL("NvimTreeGitMerge", { fg = colors.INFO })
-	HL("NvimTreeGitRenamed", { fg = colors.SECONDARY })
+	HL("NvimTreeGitRenamed", { fg = colors.PURPLE })
 	HL("NvimTreeGitNew", { fg = colors.SUCCESS })
 	HL("NvimTreeGitDeleted", { fg = colors.ERROR })
 	HL("NvimTreeSpecialFile", { fg = colors.CYAN })
@@ -293,7 +293,7 @@ function M.setHighLight()
 	HL("CmpItemKindInterface", { fg = colors.TYPE, italic = true })
 	HL("CmpItemKindModule", { fg = colors.PRIMARY })
 	HL("CmpItemKindProperty", { fg = colors.VARIABLE })
-	HL("CmpItemKindUnit", { fg = colors.ORANGE })
+	HL("CmpItemKindUnit", { fg = colors.PURPLE })
 	HL("CmpItemKindValue", { fg = colors.YELLOW })
 	HL("CmpItemKindEnum", { fg = colors.TYPE })
 	HL("CmpItemKindKeyword", { fg = colors.KEYWORD })
@@ -348,6 +348,117 @@ function M.setHighLight()
 	HL("WhichKeyDesc", { fg = colors.DEFAULT })
 	HL("WhichKeyFloat", { bg = colors.SELECTION })
 	HL("WhichKeyBorder", { fg = colors.GRAY_DARK })
+
+	-- ===========================================
+	-- Mason.nvim 支持
+	-- ===========================================
+	-- Mason 窗口和边框
+	HL("MasonNormal", { fg = colors.DEFAULT, bg = colors.BG })
+	HL("MasonHeader", { fg = colors.BG, bg = colors.PRIMARY, bold = true })
+	HL("MasonHeaderSecondary", { fg = colors.BG, bg = colors.PURPLE, bold = true })
+	HL("MasonHighlight", { fg = colors.PRIMARY, bold = true })
+	HL("MasonHighlightBlock", { fg = colors.BG, bg = colors.PRIMARY })
+	HL("MasonHighlightBlockSecondary", { fg = colors.BG, bg = colors.PURPLE })
+
+	-- Mason 状态指示
+	HL("MasonHighlightSecondary", { fg = colors.PURPLE, bold = true })
+	HL("MasonMuted", { fg = colors.GRAY })
+	HL("MasonMutedBlock", { fg = colors.BG, bg = colors.GRAY })
+	HL("MasonMutedBlockSecondary", { fg = colors.BG, bg = colors.GRAY_DARK })
+
+	-- Mason 安装状态
+	HL("MasonInstalling", { fg = colors.INFO, bold = true })
+	HL("MasonInstallingBlock", { fg = colors.BG, bg = colors.INFO })
+	HL("MasonOutdated", { fg = colors.WARNING, bold = true })
+	HL("MasonOutdatedBlock", { fg = colors.BG, bg = colors.WARNING })
+	HL("MasonOutdatedBlockSecondary", { fg = colors.BG, bg = colors.WARNING_BG })
+
+	-- Mason 错误状态
+	HL("MasonError", { fg = colors.ERROR, bold = true })
+	HL("MasonErrorBlock", { fg = colors.BG, bg = colors.ERROR })
+	HL("MasonErrorBlockSecondary", { fg = colors.BG, bg = colors.ERROR_BG })
+
+	-- Mason 成功状态
+	HL("MasonSuccess", { fg = colors.SUCCESS, bold = true })
+	HL("MasonSuccessBlock", { fg = colors.BG, bg = colors.SUCCESS })
+	HL("MasonSuccessBlockSecondary", { fg = colors.BG, bg = colors.SUCCESS_BG })
+
+	-- Mason 警告状态
+	HL("MasonWarning", { fg = colors.WARNING, bold = true })
+	HL("MasonWarningBlock", { fg = colors.BG, bg = colors.WARNING })
+	HL("MasonWarningBlockSecondary", { fg = colors.BG, bg = colors.WARNING_BG })
+
+	-- Mason 信息状态
+	HL("MasonInfo", { fg = colors.INFO, bold = true })
+	HL("MasonInfoBlock", { fg = colors.BG, bg = colors.INFO })
+	HL("MasonInfoBlockSecondary", { fg = colors.BG, bg = colors.INFO_BG })
+
+	-- Mason 包状态
+	HL("MasonPackageInstalled", { fg = colors.SUCCESS })
+	HL("MasonPackageNotInstalled", { fg = colors.GRAY })
+	HL("MasonPackageOutdated", { fg = colors.WARNING })
+	HL("MasonPackageError", { fg = colors.ERROR })
+	HL("MasonPackagePending", { fg = colors.INFO })
+
+	-- Mason 版本信息
+	HL("MasonVersion", { fg = colors.GRAY })
+	HL("MasonVersionLatest", { fg = colors.SUCCESS })
+	HL("MasonVersionOutdated", { fg = colors.WARNING })
+	HL("MasonVersionError", { fg = colors.ERROR })
+
+	-- Mason 依赖关系
+	HL("MasonDependency", { fg = colors.CYAN })
+	HL("MasonDependencyInstalled", { fg = colors.SUCCESS })
+	HL("MasonDependencyNotInstalled", { fg = colors.GRAY })
+	HL("MasonDependencyOutdated", { fg = colors.WARNING })
+	HL("MasonDependencyError", { fg = colors.ERROR })
+
+	-- Mason 配置相关
+	HL("MasonConfig", { fg = colors.PURPLE })
+	HL("MasonConfigKey", { fg = colors.KEYWORD })
+	HL("MasonConfigValue", { fg = colors.STRING })
+	HL("MasonConfigComment", { fg = colors.COMMENT, italic = true })
+
+	-- Mason 日志
+	HL("MasonLog", { fg = colors.DEFAULT })
+	HL("MasonLogInfo", { fg = colors.INFO })
+	HL("MasonLogWarn", { fg = colors.WARNING })
+	HL("MasonLogError", { fg = colors.ERROR })
+	HL("MasonLogSuccess", { fg = colors.SUCCESS })
+	HL("MasonLogDebug", { fg = colors.GRAY })
+
+	-- Mason 进度条
+	HL("MasonProgress", { fg = colors.PRIMARY })
+	HL("MasonProgressBar", { fg = colors.BG, bg = colors.PRIMARY })
+	HL("MasonProgressBarSecondary", { fg = colors.BG, bg = colors.PURPLE })
+	HL("MasonProgressBarSuccess", { fg = colors.BG, bg = colors.SUCCESS })
+	HL("MasonProgressBarWarning", { fg = colors.BG, bg = colors.WARNING })
+	HL("MasonProgressBarError", { fg = colors.BG, bg = colors.ERROR })
+
+	-- Mason 分隔符和边框
+	HL("MasonSeparator", { fg = colors.GRAY_DARK })
+	HL("MasonBorder", { fg = colors.GRAY_DARK })
+	HL("MasonBorderPrimary", { fg = colors.PRIMARY })
+	HL("MasonBorderSecondary", { fg = colors.PURPLE })
+	HL("MasonBorderSuccess", { fg = colors.SUCCESS })
+	HL("MasonBorderWarning", { fg = colors.WARNING })
+	HL("MasonBorderError", { fg = colors.ERROR })
+	HL("MasonBorderInfo", { fg = colors.INFO })
+
+	-- Mason 选择状态
+	HL("MasonSelected", { fg = colors.PRIMARY, bold = true })
+	HL("MasonSelectedBlock", { fg = colors.BG, bg = colors.PRIMARY })
+	HL("MasonSelectedBlockSecondary", { fg = colors.BG, bg = colors.PRIMARY_BG })
+
+	-- Mason 悬停状态
+	HL("MasonHover", { fg = colors.DEFAULT, bg = colors.SELECTION })
+	HL("MasonHoverBlock", { fg = colors.DEFAULT, bg = colors.SELECTION_LIGHT })
+
+	-- Mason 工具提示
+	HL("MasonTooltip", { fg = colors.DEFAULT, bg = colors.SELECTION })
+	HL("MasonTooltipBorder", { fg = colors.GRAY_DARK })
+	HL("MasonTooltipTitle", { fg = colors.PRIMARY, bold = true })
+	HL("MasonTooltipContent", { fg = colors.DEFAULT })
 end
 
 return M
