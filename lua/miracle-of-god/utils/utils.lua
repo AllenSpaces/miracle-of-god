@@ -5,6 +5,9 @@ local M = {}
 local colors = require("miracle-of-god.utils.color").COLORS
 
 local function HL(syntaxName, options)
+	-- 统一将所有高亮背景设为透明
+	options = options or {}
+	options.bg = "NONE"
 	if vim and vim.api and vim.api.nvim_set_hl then
 		vim.api.nvim_set_hl(0, syntaxName, options)
 	end
@@ -181,11 +184,28 @@ function M.setHighLight()
 	HL("DiagnosticUnderlineOk", { undercurl = true, sp = colors.SUCCESS })
 
 	-- LSP 虚拟文本
-	HL("DiagnosticVirtualTextError", { fg = colors.ERROR, bg = colors.ERROR_BG })
-	HL("DiagnosticVirtualTextWarn", { fg = colors.WARNING, bg = colors.WARNING_BG })
-	HL("DiagnosticVirtualTextInfo", { fg = colors.INFO, bg = colors.INFO_BG })
-	HL("DiagnosticVirtualTextHint", { fg = colors.PRIMARY, bg = colors.PRIMARY_BG })
-	HL("DiagnosticVirtualTextOk", { fg = colors.SUCCESS, bg = colors.SUCCESS_BG })
+	HL("DiagnosticVirtualTextError", { fg = colors.ERROR })
+	HL("DiagnosticVirtualTextWarn", { fg = colors.WARNING })
+	HL("DiagnosticVirtualTextInfo", { fg = colors.INFO })
+	HL("DiagnosticVirtualTextHint", { fg = colors.PRIMARY })
+	HL("DiagnosticVirtualTextOk", { fg = colors.SUCCESS })
+
+	-- 额外的 LSP 相关高亮：统一确保背景透明
+	HL("LspReferenceText", { underline = true, bold = true })
+	HL("LspReferenceRead", { underline = true, bold = true })
+	HL("LspReferenceWrite", { underline = true, bold = true })
+	HL("LspSignatureActiveParameter", { fg = colors.PRIMARY, bold = true })
+	HL("LspCodeLens", { fg = colors.GRAY })
+	HL("LspCodeLensSeparator", { fg = colors.GRAY_DARK })
+	HL("LspInlayHint", { fg = colors.GRAY })
+	HL("DiagnosticFloatingError", { fg = colors.ERROR })
+	HL("DiagnosticFloatingWarn", { fg = colors.WARNING })
+	HL("DiagnosticFloatingInfo", { fg = colors.INFO })
+	HL("DiagnosticFloatingHint", { fg = colors.PRIMARY })
+	HL("DiagnosticSignError", { fg = colors.ERROR })
+	HL("DiagnosticSignWarn", { fg = colors.WARNING })
+	HL("DiagnosticSignInfo", { fg = colors.INFO })
+	HL("DiagnosticSignHint", { fg = colors.PRIMARY })
 
 	-- ===========================================
 	-- 通知系统
