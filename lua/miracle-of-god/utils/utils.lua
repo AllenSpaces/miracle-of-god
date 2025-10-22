@@ -168,9 +168,9 @@ function M.setHighLight()
 	HL("IncSearch", { fg = colors.DEFAULT, bg = colors.GRAY_BG_LIGHT })
 	HL("CurSearch", { fg = colors.DEFAULT, bg = colors.GRAY_BG })
 	HL("Substitute", { fg = colors.BG, bg = colors.PURPLE })
-	HL("Visual", { bg = colors.GRAY_BG })
-	HL("VisualNOS", { bg = colors.GRAY_BG_LIGHT })
-	HL("VisualMode", { bg = colors.GRAY_BG })
+	HL("Visual", { bg = colors.BLUE_BG_LIGHT })
+	HL("VisualNOS", { bg = colors.BLUE_BG })
+	HL("VisualMode", { bg = colors.BLUE_BG_LIGHT })
 
 	-- ===========================================
 	-- LSP 诊断
