@@ -84,8 +84,8 @@ M.COLORS = {
 	GRAY_LIGHT = "#cccccc", -- 浅灰
 	GRAY_DARK = "#666666",  -- 深灰
 	GRAY_DARKER = "#444444", -- 更深灰
-	GRAY_BG = "#2a2a2a",    -- 灰色背景
-	GRAY_BG_LIGHT = "#3a3a3a", -- 浅灰色背景
+	GRAY_BG = "#404040",    -- 灰色背景
+	GRAY_BG_LIGHT = "#505050", -- 浅灰色背景
 
 	-- 语义化颜色映射
 	PRIMARY = "#c8ebf6",    -- 主色调 - 蓝色
