@@ -7,9 +7,12 @@ local colors = require("miracle-of-god.utils.color").COLORS
 local function HL(syntaxName, options)
 	-- 统一透明；对选择和搜索相关组保留显式灰色背景
 	options = options or {}
-	local preserve_bg =
-		syntaxName == "Visual" or syntaxName == "VisualNOS" or syntaxName == "VisualMode" or
-		syntaxName == "Search" or syntaxName == "IncSearch" or syntaxName == "CurSearch"
+	local preserve_bg = syntaxName == "Visual"
+		or syntaxName == "VisualNOS"
+		or syntaxName == "VisualMode"
+		or syntaxName == "Search"
+		or syntaxName == "IncSearch"
+		or syntaxName == "CurSearch"
 	if not preserve_bg then
 		options.bg = "NONE"
 	end
@@ -44,6 +47,11 @@ function M.setHighLight()
 	-- 窗口分割
 	HL("VertSplit", { fg = colors.GRAY_DARK })
 	HL("WinSeparator", { fg = colors.GRAY_DARK })
+
+	-- 折叠相关
+	HL("Folded", { fg = colors.GRAY, bg = "NONE" })
+	HL("FoldColumn", { fg = colors.GRAY_DARK })
+	HL("SignColumn", { fg = colors.GRAY_DARK })
 
 	-- ===========================================
 	-- 语法高亮 - 基础语法
