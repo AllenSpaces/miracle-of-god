@@ -393,6 +393,17 @@ function M.setHighLight()
 	HL("WhichKeyFloat", { bg = colors.SELECTION })
 	HL("WhichKeyBorder", { fg = colors.GRAY_DARK })
 
+	-- mini.icons
+	HL("MiniIconsAzure", { fg = colors.BLUE })
+	HL("MiniIconsRed", { fg = colors.RED })
+	HL("MiniIconsGreen", { fg = colors.GREEN })
+	HL("MiniIconsGrey", { fg = colors.GRAY })
+	HL("MiniIconsCyan", { fg = colors.CYAN })
+	HL("MiniIconsOrange", { fg = colors.ORANGE })
+	HL("MiniIconsBlue", { fg = colors.PRIMARY })
+	HL("MiniIconsPurple", { fg = colors.PURPLE })
+	HL("MiniIconsYellow", { fg = colors.YELLOW })
+
 	-- ===========================================
 	-- Mason.nvim 支持
 	-- ===========================================
