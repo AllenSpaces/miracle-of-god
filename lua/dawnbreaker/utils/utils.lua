@@ -2,7 +2,7 @@
 ---@diagnostic disable: undefined-global
 local vim = rawget(_G, "vim")
 local M = {}
-local colors = require("miracle-of-god.utils.color").COLORS
+local colors = require("dawnbreaker.utils.color").COLORS
 
 local function HL(syntaxName, options)
 	-- 统一透明；对选择和搜索相关组保留显式灰色背景

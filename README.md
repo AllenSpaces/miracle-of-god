@@ -1,4 +1,4 @@
-# Miracle of God - Neovim 主题
+# DawnBreaker - Neovim 主题
 
 一个现代、美观且功能完整的 Neovim 主题，专为开发者设计。
 
@@ -19,9 +19,9 @@
 ### Packer
 ```lua
 use {
-  'your-username/miracle-of-god',
+  'your-username/DawnBreaker.nvim',
   config = function()
-    require('miracle-of-god').setup()
+    require('dawnbreaker').setup()
   end
 }
 ```
@@ -29,9 +29,9 @@ use {
 ### Lazy.nvim
 ```lua
 {
-  'your-username/miracle-of-god',
+  'your-username/DawnBreaker.nvim',
   config = function()
-    require('miracle-of-god').setup()
+    require('dawnbreaker').setup()
   end
 }
 ```
@@ -39,7 +39,7 @@ use {
 ## 配置
 
 ```lua
-require('miracle-of-god').setup({
+require('dawnbreaker').setup({
   dark = true, -- 默认为暗色主题
 })
 ```
@@ -129,8 +129,8 @@ require('miracle-of-god').setup({
 主题采用模块化设计，易于扩展和维护：
 
 - `colors/` - 颜色定义
-- `lua/miracle-of-god/utils/` - 工具函数
-- `lua/miracle-of-god/lualine/` - Lualine 主题
+- `lua/dawnbreaker/utils/` - 工具函数
+- `lua/dawnbreaker/lualine/` - Lualine 主题
 
 ## 许可证
 
