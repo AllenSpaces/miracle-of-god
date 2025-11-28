@@ -1,4 +1,4 @@
-# DawnBreaker - Neovim 主题
+# DawnBreaker - Neovim 主题-
 
 一个现代、美观且功能完整的 Neovim 主题，专为开发者设计。
 
